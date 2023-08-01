@@ -11,8 +11,7 @@ pipeline {
         stage('create_infra_in_aws') {
             steps {
                 sh """
-                terraform init
-                terraform apply -var-file="dev.tfvars" -auto-approve
+                terraform destroy -var-file="dev.tfvars" -auto-approve
                 """
             }
         }
