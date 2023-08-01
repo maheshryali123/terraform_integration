@@ -13,7 +13,7 @@ resource "null_resource" "scripttorun" {
         connection {
             type = "ssh"
             user = "ubuntu"
-            private_key = file("~/.ssh/id_rsa")
+            private_key = file("/home/ubuntu/.ssh/authorized_keys")
             host = aws_instance.tomcat.public_ip
         }
         inline = [
