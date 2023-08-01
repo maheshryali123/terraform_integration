@@ -3,7 +3,7 @@ resource "aws_instance" "tomcat" {
     associate_public_ip_address = true
     key_name = "importkey"
     instance_type = "t2.micro"
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-1d"
     subnet_id = aws_subnet.public_subnet.id
     vpc_security_group_ids = [aws_security_group.opensshandtomcatport.id]
 }
