@@ -1,7 +1,7 @@
 resource "aws_instance" "tomcat" {
     ami = "ami-053b0d53c279acc90"
     associate_public_ip_address = true
-    key_name = "importkey"
+    key_name = "newkey"
     instance_type = "t2.micro"
     availability_zone = "us-east-1d"
     subnet_id = aws_subnet.public_subnet.id
